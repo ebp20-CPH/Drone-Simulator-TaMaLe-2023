@@ -1,0 +1,15 @@
+*** Configurer Commands ***
+
+Each command is a phrase where words are separated by a single space.
+1st word is the command
+2nd word is the value to be assigned
+
+width (int)
+height (int)
+length (int)
+num_drones (int)
+num_affectors (int)
+
+example: width 10
+
+*** --- ***

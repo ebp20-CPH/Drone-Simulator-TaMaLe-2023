@@ -1,7 +1,10 @@
 # dsim_configurer.py
-# Last updated: 5/17/2023
+# Last updated: 5/18/2023
 
 class Configuration:
+    help_file = open('dsim_help.txt')
+    help_text = help_file.read()
+
     def __init__(self, width, length, height, num_drones, num_affectors):
         self.width = width
         self.length = length
@@ -22,9 +25,21 @@ class Configuration:
 
         return stringified
 
-    def change_config(self, verb, param0, param1):
+    def change_config(self, verb, value):
         match verb:
             case "width":
-                print("setting width to ...")
+                self.width = value
+            case "height":
+                self.height = value
+            case "length":
+                self.length = value
+
+            case "num_drones":
+                self.num_drones = value
+            case "num_affectors":
+                self.num_affectors = value
+
+            case "help":
+                print(self.help_text)
             case _:
                 print("Unknown command... type help for a list of commands")
