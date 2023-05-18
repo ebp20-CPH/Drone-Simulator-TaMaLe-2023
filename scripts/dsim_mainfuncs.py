@@ -2,7 +2,7 @@ from scripts.classes.dsim_configurer import Configuration
 
 # Loops input updating settings object for tool
 def init_input_loop():
-    config = Configuration()
+    config = Configuration(0, 0, 0, 0, 0)
 
     text = ""
     while text != "run":
